@@ -60,11 +60,11 @@ func TestUpdate(t *testing.T) {
 
 func TestTickLoops(t *testing.T) {
 	var tests = []struct {
-		have Gloop
-		want Gloop
+		have StateLoop
+		want StateLoop
 	}{
 		{
-			Gloop{
+			StateLoop{
 				State: State{0, [][]int{}, map[string]bool{}},
 				Loops: []*State{
 					&State{0, [][]int{}, map[string]bool{}},
@@ -72,7 +72,7 @@ func TestTickLoops(t *testing.T) {
 					&State{0, [][]int{}, map[string]bool{}},
 				},
 			},
-			Gloop{
+			StateLoop{
 				State: State{0, [][]int{}, map[string]bool{}},
 				Loops: []*State{
 					&State{1, [][]int{}, map[string]bool{}},

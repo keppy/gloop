@@ -34,15 +34,15 @@ type Game interface {
 	TickLoops() error
 }
 
-// Gloop structure which inherits the functionality and storage of State, and
+// StateLoop structure which inherits the functionality and storage of State, and
 // holds a list of States which are themselves Loops.
-type Gloop struct {
+type StateLoop struct {
 	State
 	Loops []*State
 }
 
 // TickLoops advances every epoch in Loops.
-func (g *Gloop) TickLoops() error {
+func (g *StateLoop) TickLoops() error {
 	fmt.Println("pre: ", g.Loops)
 	for _, s := range g.Loops {
 		s.tick()
