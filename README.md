@@ -1,4 +1,4 @@
 # gloop
-**Game loop framework**
+**Distributed log storage**
 
 Types and methods for managing states with many agents.
